@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Zilla Slab", ui-serif, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7f5f1;
+  color: #1a1d21;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature roofline divider — a repeating pitched-roof silhouette used
+   between sections instead of a plain hairline. The polygon coordinates
+   trace a row of gable roof peaks. */
+.roofline-down {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    91.66% 40%,
+    83.33% 100%,
+    75% 40%,
+    66.66% 100%,
+    58.33% 40%,
+    50% 100%,
+    41.66% 40%,
+    33.33% 100%,
+    25% 40%,
+    16.66% 100%,
+    8.33% 40%,
+    0% 100%
+  );
+}
+
+.roofline-up {
+  clip-path: polygon(
+    0% 100%,
+    100% 100%,
+    100% 0%,
+    91.66% 60%,
+    83.33% 0%,
+    75% 60%,
+    66.66% 0%,
+    58.33% 60%,
+    50% 0%,
+    41.66% 60%,
+    33.33% 0%,
+    25% 60%,
+    16.66% 0%,
+    8.33% 60%,
+    0% 0%
+  );
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid #b5652d;
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: #b5652d;
+  color: #f7f5f1;
+}
