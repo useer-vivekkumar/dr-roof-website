@@ -40,13 +40,20 @@ export default function ContactForm() {
           }),
         });
 
-        if (!response.ok) throw new Error("Lead submission failed");
+        if (!response.ok) {
+          const result = (await response.json().catch(() => null)) as {
+            message?: string;
+          } | null;
+          throw new Error(result?.message || "Lead submission failed");
+        }
 
         setSubmitted(true);
         form.reset();
-      } catch {
+      } catch (error) {
         setSubmitError(
-          "We couldn't send your request. Please call us or try again shortly.",
+          error instanceof Error
+            ? error.message
+            : "We couldn't send your request. Please call us or try again shortly.",
         );
       } finally {
         setIsSubmitting(false);

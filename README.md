@@ -91,7 +91,11 @@ lib/
   customer quotes.
 - Contact-form submissions are sent to the configured n8n webhook through
   `app/api/leads/route.ts`. The workflow receives `name`, `phone`, `email`,
-  `service`, `message`, `source`, and `submittedAt` as JSON.
+  `service`, `message`, `source`, and `submittedAt` as JSON. The current
+  default is the n8n test webhook, so start **Listen for test event** in n8n
+  before submitting the website form. For a live site, activate the workflow,
+  change the URL to `/webhook/roof-demo`, and set it as
+  `N8N_LEAD_WEBHOOK_URL` in Vercel.
 - `email` and `logo_url` were not supplied in the source brief; a reasonable
   default email (`info@drroof.com`) was used and the logo is a typographic
   wordmark rather than an image.

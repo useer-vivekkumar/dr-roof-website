@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 
 const N8N_LEAD_WEBHOOK_URL =
-  "https://vivekpal01245.app.n8n.cloud/webhook/roof-demo";
+  process.env.N8N_LEAD_WEBHOOK_URL ??
+  "https://vivekpal01245.app.n8n.cloud/webhook-test/roof-demo";
 
 export async function POST(request: Request) {
   try {
@@ -21,7 +22,10 @@ export async function POST(request: Request) {
     if (!webhookResponse.ok) {
       console.error("n8n webhook rejected lead", webhookResponse.status);
       return NextResponse.json(
-        { message: "We couldn't send your request. Please try again." },
+        {
+          message:
+            "The n8n test webhook is not ready. In n8n, click Listen for test event, then submit the form again.",
+        },
         { status: 502 },
       );
     }
