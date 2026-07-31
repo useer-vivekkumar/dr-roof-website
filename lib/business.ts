@@ -7,7 +7,7 @@ export const business = {
   contactPath: "/contact-us",
   rating: 4.8,
   reviewCount: 1900,
-  serviceAreas: {in all over DELHI},
+  serviceAreas: [in all over DELHI],
   social: {
     facebook: "https://www.facebook.com/DrRoofGA",
     instagram: "https://www.instagram.com/dr.roof.atl/",
