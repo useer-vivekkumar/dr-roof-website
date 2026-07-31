@@ -1,13 +1,13 @@
 export const business = {
   name: "Dr. Roof",
-  phone: "(770) 220-7520",
-  phoneHref: "tel:+17702207520",
-  email: "info@drroof.com",
-  address: "88 Mansell Ct, Roswell, GA 30076",
+  phone: "+918445274197",
+  phoneHref: "tel:+918445274197",
+  email: "vivekpal84452@gmail.com",
+  address: "delhi 110065 ",
   contactPath: "/contact-us",
   rating: 4.8,
   reviewCount: 1900,
-  serviceAreas: ["Atlanta, GA", "Roswell, GA", "Marietta, GA"],
+  serviceAreas: {in all over DELHI},
   social: {
     facebook: "https://www.facebook.com/DrRoofGA",
     instagram: "https://www.instagram.com/dr.roof.atl/",
