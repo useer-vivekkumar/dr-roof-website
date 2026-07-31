@@ -23,7 +23,7 @@ export default function About() {
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
               From single-shingle repairs to full commercial replacements,
-              our crews work across {business.serviceAreas.join(", ")} with
+              our crews work across {business.serviceAreas} with
               the same standard: clean job sites, on-time crews, and a roof
               that&apos;s built to outlast the warranty.
             </p>
