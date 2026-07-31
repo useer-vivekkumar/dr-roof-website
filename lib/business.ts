@@ -3,11 +3,11 @@ export const business = {
   phone: "+918445274197",
   phoneHref: "tel:+918445274197",
   email: "vivekpal84452@gmail.com",
-  address: "delhi 110065 ",
+  address: "delhi 110065",
   contactPath: "/contact-us",
   rating: 4.8,
   reviewCount: 1900,
-  serviceAreas: "in all over DELHI",
+  serviceAreas: ["Delhi"],
   social: {
     facebook: "https://www.facebook.com/DrRoofGA",
     instagram: "https://www.instagram.com/dr.roof.atl/",
