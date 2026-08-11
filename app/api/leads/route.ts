@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const N8N_LEAD_WEBHOOK_URL =
   process.env.N8N_LEAD_WEBHOOK_URL ??
-  "https://alexgray.app.n8n.cloud/webhook/roof-demo";
+  "https://alexgray.app.n8n.cloud/webhook-test/roof-demo";
 
 export async function POST(request: Request) {
   try {
